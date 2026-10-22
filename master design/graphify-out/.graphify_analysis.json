@@ -1,0 +1,268 @@
+{
+  "communities": {
+    "0": [
+      "motion_magneticbutton",
+      "motion_magneticbutton_magneticbutton",
+      "motion_magneticbutton_magneticbuttonprops",
+      "slug_page",
+      "slug_page_generatemetadata",
+      "slug_page_generatestaticparams",
+      "slug_page_workpage",
+      "slug_page_workpageprops",
+      "templates_fashiondemo",
+      "templates_fashiondemo_fashiondemo",
+      "templates_fashiondemo_products",
+      "templates_fitnessdemo",
+      "templates_fitnessdemo_fitnessdemo",
+      "templates_fitnessdemo_trainers",
+      "templates_healthcaredemo",
+      "templates_healthcaredemo_healthcaredemo",
+      "templates_lawdemo",
+      "templates_lawdemo_lawdemo",
+      "templates_lawdemo_practice_areas",
+      "templates_photographydemo",
+      "templates_photographydemo_exhibitions",
+      "templates_photographydemo_photographydemo",
+      "templates_realestatedemo",
+      "templates_realestatedemo_listings",
+      "templates_realestatedemo_realestatedemo",
+      "templates_restaurantdemo",
+      "templates_restaurantdemo_restaurantdemo",
+      "templates_saasdemo",
+      "templates_saasdemo_saasdemo"
+    ],
+    "1": [
+      "chapters_fashionchapter",
+      "chapters_fashionchapter_fashionchapter",
+      "chapters_fashionchapter_lookbook_outfits",
+      "chapters_fitnesschapter",
+      "chapters_fitnesschapter_class_schedule",
+      "chapters_fitnesschapter_fitnesschapter",
+      "chapters_healthcarechapter",
+      "chapters_healthcarechapter_healthcarechapter",
+      "chapters_lawchapter",
+      "chapters_lawchapter_lawchapter",
+      "chapters_photographychapter",
+      "chapters_photographychapter_gallery_images",
+      "chapters_photographychapter_photographychapter",
+      "chapters_realestatechapter",
+      "chapters_realestatechapter_property_images",
+      "chapters_realestatechapter_realestatechapter",
+      "chapters_realestatechapter_thumbnail_properties",
+      "chapters_restaurantchapter",
+      "chapters_restaurantchapter_restaurantchapter",
+      "chapters_saaschapter",
+      "chapters_saaschapter_saaschapter",
+      "lib_gsap",
+      "lib_gsap_killscrolltriggers",
+      "lib_gsap_refreshscrolltrigger",
+      "sections_worksection",
+      "sections_worksection_worksection"
+    ],
+    "2": [
+      "app_page",
+      "app_page_home",
+      "lib_data",
+      "lib_data_process_steps",
+      "lib_data_stats",
+      "lib_data_testimonials",
+      "lib_data_vertical_tags",
+      "lib_data_vertical_templates",
+      "lib_data_verticaltemplate",
+      "sections_aboutsection",
+      "sections_aboutsection_aboutsection",
+      "sections_contactsection",
+      "sections_contactsection_contactsection",
+      "sections_footer",
+      "sections_footer_footer",
+      "sections_navigation",
+      "sections_navigation_navigation",
+      "sections_processsection",
+      "sections_processsection_processsection",
+      "sections_testimonialssection",
+      "sections_testimonialssection_testimonialssection",
+      "ui_statcounter",
+      "ui_statcounter_statcounter",
+      "ui_statcounter_statcounterprops"
+    ],
+    "3": [
+      "tsconfig",
+      "tsconfig_compileroptions",
+      "tsconfig_compileroptions_allowjs",
+      "tsconfig_compileroptions_esmoduleinterop",
+      "tsconfig_compileroptions_incremental",
+      "tsconfig_compileroptions_isolatedmodules",
+      "tsconfig_compileroptions_jsx",
+      "tsconfig_compileroptions_lib",
+      "tsconfig_compileroptions_module",
+      "tsconfig_compileroptions_moduleresolution",
+      "tsconfig_compileroptions_noemit",
+      "tsconfig_compileroptions_paths",
+      "tsconfig_compileroptions_plugins",
+      "tsconfig_compileroptions_resolvejsonmodule",
+      "tsconfig_compileroptions_skiplibcheck",
+      "tsconfig_compileroptions_strict",
+      "tsconfig_compileroptions_target",
+      "tsconfig_exclude",
+      "tsconfig_include",
+      "tsconfig_paths"
+    ],
+    "4": [
+      "package",
+      "package_devdependencies",
+      "package_devdependencies_autoprefixer",
+      "package_devdependencies_postcss",
+      "package_devdependencies_tailwindcss",
+      "package_devdependencies_types_node",
+      "package_devdependencies_types_react",
+      "package_devdependencies_types_react_dom",
+      "package_devdependencies_types_three",
+      "package_devdependencies_typescript",
+      "package_name",
+      "package_private",
+      "package_scripts",
+      "package_scripts_build",
+      "package_scripts_dev",
+      "package_scripts_lint",
+      "package_scripts_start",
+      "package_version"
+    ],
+    "5": [
+      "app_layout",
+      "app_layout_inter",
+      "app_layout_metadata",
+      "app_layout_outfit",
+      "app_layout_rootlayout",
+      "lib_gsap_registergsap",
+      "motion_cursorfollower",
+      "motion_cursorfollower_cursorfollower",
+      "motion_smoothscrollprovider",
+      "motion_smoothscrollprovider_smoothscrollcontext",
+      "motion_smoothscrollprovider_smoothscrollcontexttype",
+      "motion_smoothscrollprovider_smoothscrollprovider",
+      "motion_smoothscrollprovider_usesmoothscroll",
+      "ui_noiseoverlay",
+      "ui_noiseoverlay_noiseoverlay"
+    ],
+    "6": [
+      "package_dependencies",
+      "package_dependencies_clsx",
+      "package_dependencies_framer_motion",
+      "package_dependencies_gsap",
+      "package_dependencies_lenis",
+      "package_dependencies_lucide_react",
+      "package_dependencies_motion",
+      "package_dependencies_next",
+      "package_dependencies_react",
+      "package_dependencies_react_dom",
+      "package_dependencies_tailwind_merge",
+      "package_dependencies_three"
+    ],
+    "7": [
+      "canvas_heroparticles",
+      "canvas_heroparticles_heroparticles",
+      "motion_splittextreveal",
+      "motion_splittextreveal_splittextreveal",
+      "motion_splittextreveal_splittextrevealprops",
+      "sections_herosection",
+      "sections_herosection_herosection"
+    ],
+    "8": [
+      "motion_parallaxlayer",
+      "motion_parallaxlayer_parallaxlayer",
+      "motion_parallaxlayer_parallaxlayerprops",
+      "motion_pinnedsection",
+      "motion_pinnedsection_pinnedsection",
+      "motion_pinnedsection_pinnedsectionprops"
+    ],
+    "9": [
+      "lib_utils",
+      "lib_utils_cn",
+      "lib_utils_lerp"
+    ],
+    "10": [
+      "next_config",
+      "next_config_nextconfig"
+    ],
+    "11": [
+      "postcss_config",
+      "postcss_config_config"
+    ],
+    "12": [
+      "tailwind_config",
+      "tailwind_config_config"
+    ]
+  },
+  "cohesion": {
+    "0": 0.12561576354679804,
+    "1": 0.12307692307692308,
+    "2": 0.13405797101449277,
+    "3": 0.1,
+    "4": 0.1111111111111111,
+    "5": 0.1619047619047619,
+    "6": 0.16666666666666666,
+    "7": 0.38095238095238093,
+    "8": 0.26666666666666666,
+    "9": 0.6666666666666666,
+    "10": 1.0,
+    "11": 1.0,
+    "12": 1.0
+  },
+  "gods": [
+    {
+      "id": "motion_magneticbutton_magneticbutton",
+      "label": "MagneticButton()",
+      "degree": 22
+    },
+    {
+      "id": "tsconfig_compileroptions",
+      "label": "compilerOptions",
+      "degree": 16
+    },
+    {
+      "id": "package_scripts",
+      "label": "scripts",
+      "degree": 5
+    },
+    {
+      "id": "lib_data_vertical_templates",
+      "label": "VERTICAL_TEMPLATES",
+      "degree": 3
+    },
+    {
+      "id": "canvas_heroparticles_heroparticles",
+      "label": "HeroParticles()",
+      "degree": 2
+    },
+    {
+      "id": "motion_cursorfollower_cursorfollower",
+      "label": "CursorFollower()",
+      "degree": 2
+    },
+    {
+      "id": "motion_smoothscrollprovider_smoothscrollprovider",
+      "label": "SmoothScrollProvider()",
+      "degree": 2
+    },
+    {
+      "id": "motion_splittextreveal_splittextreveal",
+      "label": "SplitTextReveal()",
+      "degree": 2
+    },
+    {
+      "id": "sections_aboutsection_aboutsection",
+      "label": "AboutSection()",
+      "degree": 2
+    },
+    {
+      "id": "sections_contactsection_contactsection",
+      "label": "ContactSection()",
+      "degree": 2
+    }
+  ],
+  "surprises": [],
+  "tokens": {
+    "input": 0,
+    "output": 0
+  }
+}
