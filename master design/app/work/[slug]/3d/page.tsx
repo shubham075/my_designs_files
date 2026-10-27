@@ -1,21 +1,36 @@
+import React from "react";
 import { notFound } from "next/navigation";
 import { Fashion3D } from "@/components/templates/Fashion3D";
+import { RealEstate3D } from "@/components/templates/RealEstate3D";
 
 interface Props {
   params: Promise<{ slug: string }>;
 }
 
-export function generateStaticParams() {
-  return [{ slug: "fashion" }];
-}
-
-export const metadata = {
-  title: "Maison V — 3D Atelier",
-  description: "A WebGL fashion experience: silk curtain, spiral runway, live fabric lab and particle monogram.",
+const EXPERIENCES: Record<string, { title: string; description: string; page: React.ReactNode }> = {
+  fashion: {
+    title: "Maison V — 3D Atelier",
+    description: "A WebGL fashion experience: silk curtain, spiral runway, live fabric lab and particle monogram.",
+    page: <Fashion3D />,
+  },
+  "real-estate": {
+    title: "Aura Estates — Casa Lumen 3D",
+    description: "A WebGL villa tour: blueprint build, sun study, exploded floor plan, live configurator and neighbourhood isochrones.",
+    page: <RealEstate3D />,
+  },
 };
 
+export function generateStaticParams() {
+  return Object.keys(EXPERIENCES).map((slug) => ({ slug }));
+}
+
+export async function generateMetadata({ params }: Props) {
+  const exp = EXPERIENCES[(await params).slug];
+  return exp ? { title: exp.title, description: exp.description } : { title: "Not Found" };
+}
+
 export default async function Work3DPage({ params }: Props) {
-  const { slug } = await params;
-  if (slug !== "fashion") notFound();
-  return <Fashion3D />;
+  const exp = EXPERIENCES[(await params).slug];
+  if (!exp) notFound();
+  return exp.page;
 }

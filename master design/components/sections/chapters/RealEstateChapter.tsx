@@ -238,9 +238,14 @@ export const RealEstateChapter: React.FC = () => {
                 </Link>
               </MagneticButton>
 
-              <span className="text-[11px] uppercase tracking-widest text-zinc-500 font-mono">
-                /work/real-estate
-              </span>
+              <Link
+                href="/work/real-estate/3d"
+                className="inline-flex items-center rounded-full border border-zinc-900/25 px-5 py-3 text-xs font-bold uppercase tracking-wider text-zinc-950 transition-colors hover:bg-zinc-950 hover:text-white"
+                data-cursor="action"
+                data-cursor-text="3D"
+              >
+                View 3D
+              </Link>
             </div>
           </div>
 

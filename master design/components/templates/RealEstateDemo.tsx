@@ -7,6 +7,7 @@ import { MagneticButton } from "@/components/motion/MagneticButton";
 import { ScrollProgress } from "@/components/motion/fx";
 import { RealEstateExtras } from "./RealEstateExtras";
 import {
+  Box,
   Building2,
   MapPin,
   Bed,
@@ -97,6 +98,14 @@ export const RealEstateDemo: React.FC = () => {
             <Sparkles className="h-3 w-3 text-zinc-900" />
             <span>Paper Mode Architecture</span>
           </div>
+
+          <Link
+            href="/work/real-estate/3d"
+            className="flex items-center space-x-2 rounded-full bg-white/90 px-5 py-2 text-xs font-bold uppercase tracking-wider text-zinc-900 border border-black/10 shadow-xl backdrop-blur-xl hover:bg-zinc-950 hover:text-white transition-all"
+          >
+            <Box className="h-3.5 w-3.5" />
+            <span>View 3D</span>
+          </Link>
 
           <MagneticButton strength={0.3}>
             <button
