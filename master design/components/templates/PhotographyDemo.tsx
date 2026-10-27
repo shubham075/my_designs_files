@@ -1,7 +1,8 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
-import { Camera, X, Aperture, ArrowRight } from "lucide-react";
+import Link from "next/link";
+import { Camera, X, Aperture, ArrowRight, Box } from "lucide-react";
 import { gsap } from "@/lib/gsap";
 import { MagneticButton } from "@/components/motion/MagneticButton";
 import {
@@ -248,9 +249,17 @@ export const PhotographyDemo: React.FC = () => {
         label="Monolith Studio"
         accent={W}
         right={
-          <span className="flex items-center gap-2 rounded-full bg-white px-4 py-2 text-xs font-bold uppercase tracking-wider text-black">
-            <Camera className="h-3.5 w-3.5" /> {sheet.length} frames
-          </span>
+          <>
+            <Link
+              href="/work/photography/3d"
+              className="flex items-center gap-2 rounded-full border border-white/25 bg-black/50 px-4 py-2 text-xs font-bold uppercase tracking-wider text-white backdrop-blur-xl shadow-xl transition-colors hover:bg-white hover:text-black"
+            >
+              <Box className="h-3.5 w-3.5" /> View 3D
+            </Link>
+            <span className="flex items-center gap-2 rounded-full bg-white px-4 py-2 text-xs font-bold uppercase tracking-wider text-black">
+              <Camera className="h-3.5 w-3.5" /> {sheet.length} frames
+            </span>
+          </>
         }
       />
       <ApertureHero />
