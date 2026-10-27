@@ -154,9 +154,14 @@ export const FashionChapter: React.FC = () => {
                 </Link>
               </MagneticButton>
 
-              <span className="text-[11px] uppercase tracking-widest text-zinc-500 font-mono">
-                /work/fashion
-              </span>
+              <Link
+                href="/work/fashion/3d"
+                className="inline-flex items-center rounded-full border border-white/25 px-5 py-3 text-xs font-bold uppercase tracking-wider text-white transition-colors hover:bg-white hover:text-black"
+                data-cursor="action"
+                data-cursor-text="3D"
+              >
+                View 3D
+              </Link>
             </div>
           </div>
 

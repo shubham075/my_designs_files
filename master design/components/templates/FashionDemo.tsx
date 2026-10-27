@@ -1,7 +1,8 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
-import { ShoppingBag, X, ArrowUpRight, Plus, Minus } from "lucide-react";
+import Link from "next/link";
+import { ShoppingBag, X, ArrowUpRight, Plus, Minus, Box } from "lucide-react";
 import { gsap } from "@/lib/gsap";
 import {
   DemoDock,
@@ -396,6 +397,13 @@ export const FashionDemo: React.FC = () => {
         label="Maison V — Editorial Commerce"
         accent={INK}
         right={
+          <>
+          <Link
+            href="/work/fashion/3d"
+            className="flex items-center gap-2 rounded-full border border-white/25 bg-black/50 px-5 py-2 text-xs font-bold uppercase tracking-wider text-white backdrop-blur-xl shadow-xl hover:bg-white hover:text-black transition-colors"
+          >
+            <Box className="h-3.5 w-3.5" /> View 3D
+          </Link>
           <button
             ref={bagBtn}
             onClick={() => setBagOpen(true)}
@@ -403,6 +411,7 @@ export const FashionDemo: React.FC = () => {
           >
             <ShoppingBag className="h-3.5 w-3.5" /> Bag ({bagCount})
           </button>
+          </>
         }
       />
 
