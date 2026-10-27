@@ -13,10 +13,18 @@ import Link from "next/link";
 import * as THREE from "three";
 import { X, ArrowUpRight, Wind, Layers } from "lucide-react";
 import { DemoDock, u, prefersReduced } from "@/components/motion/fx";
+import {
+  Station,
+  PanelLabel as Label,
+  FilmOverlay,
+  Loader,
+  ChapterRail,
+  scrollToStation as goTo,
+  stationProgress,
+} from "./three-kit";
 
 const GOLD = "#c9a96e";
 const BG = 0x0a0908;
-const SECTION_VH = 1.6;
 
 const LOOKS = [
   { title: "The Structured Trench", note: "Virgin wool · Horn", img: u("1490481651871-ab68de25d43d", 900) },
@@ -440,7 +448,7 @@ function startEngine(
   const tick = () => {
     raf = requestAnimationFrame(tick);
     const t = clock.getElapsedTime();
-    k = THREE.MathUtils.clamp(window.scrollY / (window.innerHeight * SECTION_VH), 0, 3);
+    k = stationProgress(3);
     ks += (k - ks) * 0.07;
     const vel = Math.abs(ks - prevKs);
     prevKs = ks;
@@ -573,36 +581,19 @@ export const Fashion3D: React.FC = () => {
     };
   }, []);
 
-  const goTo = (i: number) => window.scrollTo({ top: i * window.innerHeight * SECTION_VH, behavior: "smooth" });
-
   return (
     <div className="relative bg-[#0a0908] text-[#efe9df] selection:bg-[#c9a96e] selection:text-black">
       <canvas ref={canvas} className="fixed inset-0 h-screen w-screen" />
 
-      {/* film grain + vignette */}
-      <div
-        className="pointer-events-none fixed inset-0 z-[5] opacity-[0.07] mix-blend-overlay"
-        style={{
-          backgroundImage:
-            "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E\")",
-        }}
+      <FilmOverlay />
+      <Loader
+        title={<p className="font-serif text-5xl sm:text-7xl italic tracking-tight">Maison V</p>}
+        note="Weaving the atelier"
+        progress={progress}
+        loaded={loaded}
+        accent={GOLD}
+        bg="#0a0908"
       />
-      <div className="pointer-events-none fixed inset-0 z-[5] bg-[radial-gradient(ellipse_at_center,transparent_55%,rgba(0,0,0,0.65))]" />
-
-      {/* loader */}
-      <div
-        className={`fixed inset-0 z-[60] flex flex-col items-center justify-center bg-[#0a0908] transition-all duration-1000 ${
-          loaded ? "pointer-events-none opacity-0" : "opacity-100"
-        }`}
-      >
-        <p className="font-serif text-5xl sm:text-7xl italic tracking-tight">Maison V</p>
-        <div className="mt-8 h-px w-56 bg-white/10">
-          <div className="h-full bg-[#c9a96e] transition-[width] duration-300" style={{ width: `${progress * 100}%` }} />
-        </div>
-        <p className="mt-3 font-mono text-[10px] uppercase tracking-[0.4em] text-white/40">
-          Weaving the atelier · {Math.round(progress * 100)}%
-        </p>
-      </div>
 
       <DemoDock
         label="Maison V — 3D Atelier"
@@ -617,21 +608,7 @@ export const Fashion3D: React.FC = () => {
         }
       />
 
-      {/* chapter rail */}
-      <nav className="fixed right-5 top-1/2 z-40 hidden -translate-y-1/2 flex-col gap-4 md:flex">
-        {CHAPTERS.map((c, i) => (
-          <button key={c} onClick={() => goTo(i)} className="group flex items-center justify-end gap-3">
-            <span
-              className={`font-mono text-[10px] uppercase tracking-[0.3em] transition-opacity ${
-                chapter === i ? "opacity-100 text-[#c9a96e]" : "opacity-0 group-hover:opacity-60"
-              }`}
-            >
-              {String(i + 1).padStart(2, "0")} {c}
-            </span>
-            <span className={`block h-px transition-all ${chapter === i ? "w-10 bg-[#c9a96e]" : "w-4 bg-white/30"}`} />
-          </button>
-        ))}
-      </nav>
+      <ChapterRail chapters={CHAPTERS} active={chapter} accent={GOLD} />
 
       {/* hover label for runway panels */}
       <div
@@ -831,13 +808,3 @@ export const Fashion3D: React.FC = () => {
     </div>
   );
 };
-
-const Station: React.FC<{ children: React.ReactNode; last?: boolean }> = ({ children, last }) => (
-  <section style={{ height: last ? "100vh" : `${SECTION_VH * 100}vh` }}>
-    <div className="sticky top-0 h-screen">{children}</div>
-  </section>
-);
-
-const Label: React.FC<{ children: React.ReactNode }> = ({ children }) => (
-  <p className="mb-2 mt-5 text-[10px] font-semibold uppercase tracking-widest text-white/40">{children}</p>
-);
